@@ -2,6 +2,11 @@
 
 This Django REST Framework API provides a "Like" button feature for articles. The API allows anyone to view the number of likes on an article and increment the like count without requiring user authentication.
 
+## Deployed link
+```
+https://like-button-api.onrender.com
+```
+
 
 ## Project Setup
 
