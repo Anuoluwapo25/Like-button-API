@@ -1,30 +1,28 @@
 Like Button API
 This Django REST Framework API provides a "Like" button feature for articles. The API allows anyone to view the number of likes on an article and increment the like count without requiring user authentication.
-
 Features
 Like Count Display: Retrieve the total number of likes for a specific article.
 Like Increment: Increment the like count for an article.
 Project Setup
-
 Requirements
 Django REST Framework
 Installation
 Clone the repository:
 
-git clone https://github.com/Anuoluwapo25/Like-button-API)
-cd Like-button
+git clone https://github.com/Anuoluwapo25/Like-button-API
+      cd Like-button
 
 Create and activate a virtual environment:
-python3 -m venv myenv
-source myenv/bin/activate  
 
-# On Windows:
-myenv\Scripts\activate
+python3 -m venv myenv
+     source myenv/bin/activate  # On Windows: myenv\Scripts\activate
 
 Install dependencies:
+
 pip install -r requirements.txt
 
 Run migrations:
+
 python manage.py migrate
 
 Start the development server:
@@ -33,13 +31,9 @@ python manage.py runserver
 Creating Articles (Sample Data)
 For testing purposes, you can create articles via the Django admin panel or Django shell.
 
-bash
-Copy code
-python manage.py shell
-Then, create a sample article:
+     python manage.py shell
 
-python
-Copy code
+         Then, create a sample article:
 from likes.models import Article  
 article = Article.objects.create(title="Sample Article", content="This is a sample article.")
 
@@ -52,12 +46,10 @@ Response:
 200 OK: Returns article details including the current like count.
 404 Not Found: Article not found.
 Example Request:
-
 curl -X GET http://127.0.0.1:8000/articles/1/
-Example Response:
 
+Example Response:
 json
-Copy code
 {
   "id": 1,
   "title": "Sample Article",
@@ -74,13 +66,10 @@ Response:
 200 OK: Returns the updated article details with the incremented like count.
 404 Not Found: Article not found.
 Example Request:
-
-
 curl -X POST http://127.0.0.1:8000/articles/1/like/
-Example Response:
 
+Example Response:
 json
-Copy code
 {
   "id": 1,
   "title": "Sample Article",
@@ -88,24 +77,5 @@ Copy code
   "likes": 1
 }
 
-Testing the API
-Using Curl
-
-To get article details:
-curl -X GET http://127.0.0.1:8000/articles/1/
-
-To like an article:
-curl -X POST http://127.0.0.1:8000/articles/1/like/
-Using Postman
-Get Article Details:
-
-Set method to GET.
-Enter the URL: http://127.0.0.1:8000/articles/1/.
-Send request and view response.
-Like an Article:
-
-Set method to POST.
-Enter the URL: http://127.0.0.1:8000/articles/1/like/.
-Send request and view the updated like count in the response.
 
 
