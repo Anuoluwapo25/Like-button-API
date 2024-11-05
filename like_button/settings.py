@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-0ce^46*o64l@xyont37m5l61kjizz@g&=1ofd#aczki8dp#@83
 DEBUG = True
 
 ALLOWED_HOSTS = [
-"https://like-button-api.onrender.com"
+    'localhost',
+    '127.0.0.1',
+    'like-button-api.onrender.com', 
 ]
 
 
