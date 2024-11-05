@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-0ce^46*o64l@xyont37m5l61kjizz@g&=1ofd#aczki8dp#@83
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+"https://like-button-api.onrender.com"
+]
 
 
 # Application definition
