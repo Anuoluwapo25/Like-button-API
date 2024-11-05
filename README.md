@@ -89,8 +89,10 @@ json
   "content": "This is a sample article.",
   "likes": 0
 }
+```
 
-Like an Article
+
+### Like an Article
 URL: /articles/<int:article_id>/like/
 Method: POST
 Description: Increment the like count for a specific article.
