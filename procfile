@@ -1,1 +1,1 @@
-gunicorn like_button.wsgi:application
+web: gunicorn like_button.wsgi:application
