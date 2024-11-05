@@ -79,10 +79,10 @@ For testing purposes, you can create articles via the Django admin panel or Djan
 
 ```
 curl -X GET http://127.0.0.1:8000/articles/1/
-Example Response:
+```
+**Example Response**:
 
-json
-
+```
 {
   "id": 1,
   "title": "Sample Article",
@@ -102,11 +102,12 @@ Response:
 404 Not Found: Article not found.
 Example Request:
 
-
+```
 curl -X POST http://127.0.0.1:8000/articles/1/like/
-Example Response:
+```
+**Example Request**:
 
-json
+```
 
 {
   "id": 1,
@@ -114,7 +115,7 @@ json
   "content": "This is a sample article.",
   "likes": 1
 }
-
+```
 
 ## Contributing
 
