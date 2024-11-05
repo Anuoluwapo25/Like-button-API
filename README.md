@@ -93,14 +93,16 @@ curl -X GET http://127.0.0.1:8000/articles/1/
 
 
 ### Like an Article
-URL: /articles/<int:article_id>/like/
-Method: POST
-Description: Increment the like count for a specific article.
-Permissions: No authentication required.
-Response:
-200 OK: Returns the updated article details with the incremented like count.
-404 Not Found: Article not found.
-Example Request:
+
+- **URL**: `/articles/<int:article_id>/like/
+- **Method**: `POST`
+- **Description**: Increment the like count for a specific article.
+- **Permissions**: No authentication required.
+- **Response**:
+- `200 OK`: Returns the updated article details with the incremented like count.
+- `404 Not Found`: Article not found.
+
+**Example Request**:
 
 ```
 curl -X POST http://127.0.0.1:8000/articles/1/like/
